@@ -15,9 +15,8 @@ end
 
 function MemeArrow(Player, Message)
 	if string.starts(Message, ">") then
-		cRoot:Get():BroadcastChat('<'.. Player:GetName() .. '> @2' .. Message)
-		return true
-	else
+		return false, ('@a' .. Message) --returns false, and the new message with light green selected instead of broadcasting like earlier
+	else								--This will make it compatible with other chat plugins and formats.
 		end
 end
 
